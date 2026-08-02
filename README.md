@@ -21,7 +21,7 @@ Then open the local preview on port `8000`. Stop the server with `Ctrl+C`.
 
 ## Update images
 
-- The current hero uses responsive optimized derivatives at `assets/hero-portrait-512.jpg` and `assets/hero-portrait-800.jpg`; `assets/hero-portrait-v2.png` is the high-quality source.
+- The current hero uses responsive optimized assets at `assets/nana-hero-portrait-20260802-512.jpg` and `assets/nana-hero-portrait-20260802-800.jpg`.
 - Alternate supplied photos are saved as `assets/photo-1.jpg` and `assets/photo-3.jpg`.
 - Replace any image while preserving the filename, or update its `src` in `index.html`.
 - Export final web images as WebP or optimized JPEG, ideally below 300 KB, and provide accurate `width`, `height`, and `alt` values.
