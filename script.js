@@ -4,7 +4,6 @@ const menuButton = document.querySelector('[data-menu-toggle]');
 const nav = document.querySelector('[data-nav]');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const finePointer = window.matchMedia('(pointer: fine)').matches;
-
 document.body.classList.add('is-loading');
 
 // Lightweight page-load choreography. Content remains available without animation.
@@ -126,12 +125,16 @@ if (finePointer && !reduceMotion) {
     });
 }
 
-document.querySelector('[data-year]').textContent = new Date().getFullYear();
+const year = document.querySelector('[data-year]');
+if (year) year.textContent = new Date().getFullYear();
 
-document.querySelector('[data-contact-form]').addEventListener('submit', (event) => {
-  event.preventDefault();
-  const data = new FormData(event.currentTarget);
-  const subject = encodeURIComponent(`${data.get('interest')} — inquiry from ${data.get('name')}`);
-  const body = encodeURIComponent(`Name: ${data.get('name')}\nEmail: ${data.get('email')}\nInterest: ${data.get('interest')}\n\nProblem or opportunity:\n${data.get('message')}`);
-  window.location.href = `mailto:iniemailnana@gmail.com?subject=${subject}&body=${body}`;
-});
+const contactForm = document.querySelector('[data-contact-form]');
+if (contactForm) {
+  contactForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    const subject = encodeURIComponent(`${data.get('interest')} — inquiry from ${data.get('name')}`);
+    const body = encodeURIComponent(`Name: ${data.get('name')}\nEmail: ${data.get('email')}\nInterest: ${data.get('interest')}\n\nProblem or opportunity:\n${data.get('message')}`);
+    window.location.href = `mailto:iniemailnana@gmail.com?subject=${subject}&body=${body}`;
+  });
+}
