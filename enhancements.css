@@ -16,3 +16,19 @@ body{font-size:17px}.hero-statement{max-width:690px;font-size:clamp(1.12rem,1.65
 @media(max-width:1100px){.orion-steps{grid-template-columns:repeat(3,minmax(0,1fr))}.orion-step{min-height:190px}.orion-step:not(:last-child):after{right:-16px}.orion-step:nth-child(3n):not(:last-child):after{content:"↓";top:auto;right:50%;bottom:-17px;transform:translateX(50%)}.architecture-flow{grid-template-columns:1fr 2fr}.architecture-flow>article:nth-child(2):after{content:"↓";top:auto;right:50%;bottom:-22px;transform:translateX(50%)}.system-in-action>div{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){.orion-workflow{padding:62px 0}.workflow-summary{grid-template-columns:1fr;gap:18px}.workflow-intro h2{font-size:clamp(3.4rem,18vw,5rem)}.workflow-intro>p{font-size:.94rem}.workflow-metrics{gap:7px;margin-top:24px}.workflow-metrics article{min-height:96px;display:flex;align-items:flex-start;flex-direction:column;gap:7px;padding:12px}.workflow-metrics svg{width:22px;height:22px}.workflow-metrics strong{font-size:.82rem}.workflow-metrics span{font-size:.55rem;line-height:1.3}.orion-mission{padding:20px}.workflow-panel,.architecture-panel,.system-in-action{padding:14px;border-radius:14px}.orion-steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.orion-step{min-height:178px;padding:13px 11px}.orion-step svg{width:23px;height:23px;margin:17px 0 15px}.orion-step h3{min-height:37px;font-size:.73rem}.orion-step p{font-size:.63rem}.orion-step:not(:last-child):after{content:"→";top:50%;right:-15px;bottom:auto;transform:translateY(-50%)}.orion-step:nth-child(even):not(:last-child):after{content:"↓";top:auto;right:50%;bottom:-15px;transform:translateX(50%)}.orion-step:last-child{grid-column:1/-1;min-height:142px}.decision-outcomes{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:27px}.decision-outcomes article{min-height:65px;padding:10px}.decision-outcomes article:before{height:19px}.decision-outcomes strong{font-size:.69rem}.decision-outcomes span{font-size:.61rem}.architecture-flow{grid-template-columns:1fr 1fr;gap:18px}.architecture-flow>article{padding:14px}.architecture-flow>article:not(:last-child):after{content:"→";top:50%;right:-16px;bottom:auto;transform:translateY(-50%)}.architecture-flow>article:nth-child(even):not(:last-child):after{content:"↓";top:auto;right:50%;bottom:-18px;transform:translateX(50%)}.system-actions{grid-template-columns:repeat(2,1fr)}.system-in-action>div{grid-template-columns:1fr}.system-in-action article{padding:15px}.system-in-action h3{font-size:.78rem}.system-in-action p{font-size:.67rem}}
 @media(prefers-reduced-motion:reduce){.orion-step{transition:none}}
+
+/* Isolated desktop containment fixes: project covers and homepage Labs badge. */
+.labs-product-note{transform:none}
+@media(min-width:901px){
+  .project-card{grid-template-rows:auto 1fr}
+  .project-visual{width:100%;height:auto;min-height:0;aspect-ratio:2/1;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .project-visual.visual-ai{display:flex;align-items:stretch;justify-content:flex-start}
+  .project-visual.visual-work{padding:22px}
+  .project-visual.visual-work .orbit{width:min(128px,42%);height:auto;aspect-ratio:1;flex:0 0 auto}
+  .project-visual.visual-work>b{margin-top:12px;font-size:clamp(1.75rem,2.4vw,2.15rem);line-height:1}
+  .project-visual.visual-work>small{margin-top:6px;line-height:1.2}
+  .home-labs-visual{overflow:hidden}
+  .labs-product-note{top:calc(50% + 12px);right:calc(clamp(28px,4vw,52px) + 14px);bottom:auto;width:min(158px,calc(50% - 42px));padding:12px 14px;transform:none}
+  .labs-product-note strong{margin:5px 0 3px;font-size:1.2rem}
+  .labs-product-note span,.labs-product-note small{font-size:.52rem}
+}
