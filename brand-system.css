@@ -1,23 +1,39 @@
 /* Nana Labs 2026 brand system — a single presentation layer shared by every public page. */
 :root {
-  --brand-night: #071612;
-  --brand-deep: #0b2922;
-  --brand-forest: #123e34;
-  --brand-paper: #f4f3ec;
-  --brand-mist: #e9ece3;
-  --brand-lime: #c7e83f;
-  --brand-lime-soft: #e2f16e;
-  --brand-ink: #101512;
-  --brand-muted: #66706a;
-  --brand-line: rgba(17, 31, 25, .14);
-  --brand-glow: 0 32px 90px rgba(7, 31, 25, .16), 0 8px 24px rgba(7, 31, 25, .08);
+  --brand-night: #0b0b0b;
+  --brand-deep: #1a1a18;
+  --brand-forest: #242320;
+  --brand-paper: #f2f0e9;
+  --brand-mist: #e7e2d8;
+  --brand-lime: #c65a2e;
+  --brand-lime-soft: #9e4930;
+  --brand-ink: #0b0b0b;
+  --brand-muted: #625f58;
+  --brand-line: rgba(11, 11, 11, .14);
+  --brand-glow: 0 32px 90px rgba(11, 11, 11, .14), 0 8px 24px rgba(11, 11, 11, .08);
   --brand-glow-dark: 0 40px 110px rgba(0, 0, 0, .30), inset 0 1px rgba(255, 255, 255, .06);
   --brand-radius: clamp(20px, 2vw, 30px);
 }
 
+/* Centralized compatibility tokens keep legacy components on the same palette. */
+:root {
+  --accent: #c65a2e;
+  --accent-dark: #9e4930;
+  --paper: #f2f0e9;
+  --ink: #0b0b0b;
+  --deep: #0b0b0b;
+  --muted: #625f58;
+  --line: rgba(11, 11, 11, .14);
+  --labs-night: #0b0b0b;
+  --labs-deep: #1a1a18;
+  --labs-cream: #f2f0e9;
+  --labs-mist: #e7e2d8;
+  --labs-lime: #c65a2e;
+}
+
 html { background: var(--brand-night); }
 body { background: var(--brand-paper); font-size: 17px; line-height: 1.62; }
-body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; background: radial-gradient(circle at 82% 8%, rgba(199,232,63,.11), transparent 28%), radial-gradient(circle at 8% 42%, rgba(29,94,77,.08), transparent 31%); }
+body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; background: radial-gradient(circle at 82% 8%, rgba(198,90,46,.10), transparent 28%), radial-gradient(circle at 8% 42%, rgba(158,73,48,.06), transparent 31%); }
 .container { width: min(calc(100% - clamp(32px, 5vw, 88px)), 1240px); }
 .section, .story-section { padding-block: clamp(72px, 7vw, 108px); }
 .section-kicker, .eyebrow, .project-tag, .lab-label, .labs-kicker, .story-no, .workflow-panel-label { font-size: .74rem; font-weight: 850; letter-spacing: .15em; }
@@ -34,17 +50,17 @@ p { text-wrap: pretty; }
 .site-nav .nav-cta { min-height: 46px; display: inline-flex; align-items: center; gap: 10px; padding: 10px 17px; border-radius: 12px; box-shadow: 0 12px 26px rgba(8,22,18,.18); }
 
 /* Home hero: sharper commercial hierarchy and cinematic portrait treatment. */
-.hero { min-height: 100svh; padding-top: 126px; background: radial-gradient(circle at 76% 22%, rgba(199,232,63,.15), transparent 25%), radial-gradient(circle at 10% 75%, rgba(21,80,66,.08), transparent 32%), linear-gradient(145deg, #f8f7f1, #eeefe6); }
+.hero { min-height: 100svh; padding-top: 126px; background: radial-gradient(circle at 76% 22%, rgba(198,90,46,.13), transparent 25%), radial-gradient(circle at 10% 75%, rgba(158,73,48,.06), transparent 32%), linear-gradient(145deg, #f7f5ee, #e9e4db); }
 .hero-grid { gap: clamp(48px, 7vw, 100px); }
 .hero-copy { max-width: 720px; padding-bottom: 0; }
 .hero h1 { margin: clamp(42px, 5vw, 70px) 0 38px; font-size: clamp(5.6rem, 9.6vw, 9.1rem); filter: drop-shadow(0 12px 30px rgba(12,27,21,.07)); }
 .headline { max-width: 700px; font-size: .83rem; line-height: 1.65; letter-spacing: .105em; }
-.hero-statement { max-width: 680px; margin: 26px 0 30px; font-size: clamp(1.25rem, 1.75vw, 1.58rem); color: #3f4a44; }
+.hero-statement { max-width: 680px; margin: 26px 0 30px; font-size: clamp(1.25rem, 1.75vw, 1.58rem); color: #4f4b45; }
 .hero-scope { border-color: rgba(17,31,25,.16); background: rgba(17,31,25,.11); box-shadow: 0 22px 54px rgba(11,31,24,.09); }
 .hero-scope div { background: rgba(250,250,246,.82); }
 .hero-scope strong { font-size: .88rem; }
 .button { border-radius: 12px; min-height: 52px; padding-inline: 20px; }
-.button-primary { box-shadow: 0 16px 34px rgba(112,145,8,.18); }
+.button-primary { box-shadow: 0 16px 34px rgba(158,73,48,.22); }
 .button:hover { transform: translateY(-3px); }
 .hero-portrait { overflow: hidden; border: 1px solid rgba(255,255,255,.72); border-radius: var(--brand-radius); box-shadow: 0 42px 100px rgba(8,28,22,.23), 0 12px 32px rgba(8,28,22,.12); }
 .hero-portrait::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(180deg, transparent 58%, rgba(4,18,14,.32)); }
@@ -53,20 +69,20 @@ p { text-wrap: pretty; }
 .hero-portrait figcaption { position: absolute; z-index: 2; right: 18px; bottom: 16px; left: 18px; padding: 11px 13px; border: 1px solid rgba(255,255,255,.22); border-radius: 10px; background: rgba(6,20,16,.52); color: #f5f6f0; backdrop-filter: blur(14px); }
 
 /* Shared editorial sections and cards. */
-.impact-strip { position: relative; padding-block: clamp(60px, 6vw, 88px); background: linear-gradient(180deg, #f0f1e9, #e7eadf); }
+.impact-strip { position: relative; padding-block: clamp(60px, 6vw, 88px); background: linear-gradient(180deg, #eeeae2, #e4ded4); }
 .impact-grid { gap: 12px; }
 .impact-card { min-height: 200px; padding: 26px 23px; border-radius: 20px; background: linear-gradient(145deg, rgba(255,255,255,.78), rgba(244,246,238,.56)); box-shadow: 0 20px 55px rgba(15,37,29,.08), inset 0 1px rgba(255,255,255,.8); }
 .impact-card strong { font-size: clamp(1.35rem, 2vw, 1.8rem); }
 .impact-card > span:not(.impact-icon) { font-size: .94rem; }
 .impact-card small { font-size: .78rem; }
-.about-grid { padding: clamp(38px, 5vw, 68px); border-radius: var(--brand-radius); background: radial-gradient(circle at 90% 10%, rgba(199,232,63,.13), transparent 24%), rgba(255,255,255,.57); box-shadow: var(--brand-glow); }
+.about-grid { padding: clamp(38px, 5vw, 68px); border-radius: var(--brand-radius); background: radial-gradient(circle at 90% 10%, rgba(198,90,46,.11), transparent 24%), rgba(255,255,255,.57); box-shadow: var(--brand-glow); }
 .about-copy > p { font-size: 1.05rem; }
 .about-copy .lead { font-size: clamp(1.42rem, 2.2vw, 1.9rem); }
 .principles { gap: 8px; }
 .principles span { padding: 11px 13px; border: 1px solid var(--brand-line); border-radius: 999px; background: rgba(255,255,255,.58); text-align: center; }
-.section-ink { background: radial-gradient(circle at 88% 12%, rgba(199,232,63,.10), transparent 25%), linear-gradient(145deg, #09201a, #06130f 70%); }
+.section-ink { background: radial-gradient(circle at 88% 12%, rgba(198,90,46,.10), transparent 25%), linear-gradient(145deg, #1a1a18, #0b0b0b 70%); }
 .service-row { min-height: 102px; padding: 26px 18px; border-radius: 16px; transition: background .28s, transform .28s, border-color .28s; }
-.service-row:hover { transform: translateX(5px); background: rgba(255,255,255,.055); border-color: rgba(199,232,63,.34); }
+.service-row:hover { transform: translateX(5px); background: rgba(255,255,255,.055); border-color: rgba(198,90,46,.42); }
 .service-row h3 { font-size: clamp(1.5rem, 2.7vw, 2.45rem); }
 .service-row p { font-size: 1rem; }
 .experience-item { border-radius: 18px; transition: padding .28s, background .28s; }
@@ -75,7 +91,7 @@ p { text-wrap: pretty; }
 .experience-item p { font-size: 1rem; }
 
 /* Selected work: aligned product covers and denser case-study cards. */
-.work-section { background: radial-gradient(circle at 78% 5%, rgba(199,232,63,.09), transparent 25%), linear-gradient(155deg, #08231d, #06130f); }
+.work-section { background: radial-gradient(circle at 78% 5%, rgba(198,90,46,.09), transparent 25%), linear-gradient(155deg, #1a1a18, #0b0b0b); }
 .project-grid { gap: 24px; align-items: stretch; }
 .project-card { border-radius: 26px; border-color: rgba(255,255,255,.18); box-shadow: var(--brand-glow-dark); }
 .project-card:hover { transform: translateY(-6px); }
@@ -84,49 +100,49 @@ p { text-wrap: pretty; }
 .project-body h3 { font-size: clamp(1.72rem, 2.5vw, 2.2rem); }
 .project-body dd { font-size: .93rem; }
 .impact-model p { font-size: .88rem; }
-.impact-row { background: linear-gradient(145deg, #eff2e5, #e4ead8); }
+.impact-row { background: linear-gradient(145deg, #eee9df, #dfd8cc); }
 .project-visual.visual-work { min-height: 280px; }
 .project-visual.visual-work .orbit { width: 118px; height: 118px; }
 .project-visual.visual-work > small { color: #26302b; font-size: .64rem; }
 
 /* Commercial pathways and contact. */
 .help-grid { gap: 16px; }
-.help-card { min-height: 320px; border-radius: 22px; background: radial-gradient(circle at 85% 10%, rgba(199,232,63,.12), transparent 26%), rgba(255,255,255,.66); box-shadow: 0 24px 64px rgba(11,34,26,.09); }
+.help-card { min-height: 320px; border-radius: 22px; background: radial-gradient(circle at 85% 10%, rgba(198,90,46,.11), transparent 26%), rgba(255,255,255,.66); box-shadow: 0 24px 64px rgba(11,11,11,.09); }
 .help-card h3 { font-size: clamp(1.65rem, 2.5vw, 2.1rem); }
 .help-card > p:last-of-type { font-size: 1rem; }
-.skills-section { background: linear-gradient(160deg, #e7ebe0, #f4f3ec); }
+.skills-section { background: linear-gradient(160deg, #e5dfd5, #f2f0e9); }
 .skill-group { padding: 22px; border: 1px solid var(--brand-line); border-radius: 18px; background: rgba(255,255,255,.5); }
 .skill-group li { font-size: .96rem; }
-.contact { background: radial-gradient(circle at 82% 15%, rgba(199,232,63,.14), transparent 28%), linear-gradient(145deg, #0c2e26, #071612 75%); }
+.contact { background: radial-gradient(circle at 82% 15%, rgba(198,90,46,.14), transparent 28%), linear-gradient(145deg, #1a1a18, #0b0b0b 75%); }
 .contact-form { border: 1px solid rgba(255,255,255,.13); border-radius: 24px; background: rgba(255,255,255,.055); box-shadow: var(--brand-glow-dark); backdrop-filter: blur(14px); }
 .contact-form input, .contact-form select, .contact-form textarea { min-height: 50px; font-size: .96rem; }
 .footer { border-top: 1px solid rgba(255,255,255,.08); }
 
 /* Nana Labs product-library system. */
-.home-labs { background: radial-gradient(circle at 20% 20%, rgba(199,232,63,.10), transparent 24%), #e9ece3; }
+.home-labs { background: radial-gradient(circle at 20% 20%, rgba(198,90,46,.10), transparent 24%), #e7e2d8; }
 .home-labs-card { border-radius: 32px; box-shadow: 0 40px 110px rgba(7,31,25,.23); }
-.home-labs-copy { background: linear-gradient(150deg, #0b2b24, #071b16); }
-.home-labs-visual { background: radial-gradient(circle at 82% 18%, rgba(199,232,63,.18), transparent 26%), linear-gradient(145deg, #16473b, #0e3028); }
+.home-labs-copy { background: linear-gradient(150deg, #1a1a18, #0b0b0b); }
+.home-labs-visual { background: radial-gradient(circle at 82% 18%, rgba(198,90,46,.18), transparent 26%), linear-gradient(145deg, #282622, #1a1a18); }
 .labs-flow-step { min-height: 170px; }
 .labs-flow-step strong { font-size: 1.28rem; }
 .labs-flow-step small { font-size: .78rem; }
 .labs-product-note { box-shadow: 0 18px 38px rgba(2,17,13,.32); }
 .labs-page { background: var(--brand-paper); }
-.labs-hero { min-height: 80svh; background: radial-gradient(circle at 78% 12%, rgba(199,232,63,.16), transparent 28%), linear-gradient(145deg, #f8f7f1, #e9ece2); }
+.labs-hero { min-height: 80svh; background: radial-gradient(circle at 78% 12%, rgba(198,90,46,.14), transparent 28%), linear-gradient(145deg, #f7f5ee, #e7e2d8); }
 .labs-hero-copy > p:last-child { font-size: clamp(1.2rem, 2vw, 1.55rem); }
 .labs-hero-aside { padding: 30px; border: 1px solid var(--brand-line); border-radius: 20px; background: rgba(255,255,255,.44); box-shadow: var(--brand-glow); }
-.labs-library { background: radial-gradient(circle at 82% 10%, rgba(199,232,63,.1), transparent 26%), linear-gradient(145deg, #071813, #0a2922); }
+.labs-library { background: radial-gradient(circle at 82% 10%, rgba(198,90,46,.10), transparent 26%), linear-gradient(145deg, #0b0b0b, #1a1a18); }
 .lab-card { border-radius: 28px; box-shadow: var(--brand-glow-dark); }
 .lab-card-copy { padding: clamp(34px, 5vw, 72px); }
 .lab-card-copy > p { font-size: 1.02rem; }
-.lab-card-visual { background: radial-gradient(circle at 72% 18%, rgba(199,232,63,.17), transparent 29%), #0d332a; }
+.lab-card-visual { background: radial-gradient(circle at 72% 18%, rgba(198,90,46,.17), transparent 29%), #1a1a18; }
 .focus-column, .roadmap-track, .roadmap-future, .continue-card { border-radius: 20px; box-shadow: 0 22px 60px rgba(12,35,27,.08); }
 .focus-column p, .focus-item span, .roadmap-item span, .roadmap-future p { font-size: .88rem; }
 
 /* ORION keeps its confidentiality-safe story while gaining readable technical density. */
-.orion-hero { background: radial-gradient(circle at 76% 12%, rgba(199,232,63,.14), transparent 26%), linear-gradient(145deg, #06130f, #0b2922); }
+.orion-hero { background: radial-gradient(circle at 76% 12%, rgba(198,90,46,.14), transparent 26%), linear-gradient(145deg, #0b0b0b, #1a1a18); }
 .hero-system-map { border-radius: 24px; box-shadow: var(--brand-glow-dark); }
-.story-section.ink { background: radial-gradient(circle at 88% 5%, rgba(199,232,63,.075), transparent 25%), linear-gradient(145deg, #06130f, #0a201a); }
+.story-section.ink { background: radial-gradient(circle at 88% 5%, rgba(198,90,46,.075), transparent 25%), linear-gradient(145deg, #0b0b0b, #1a1a18); }
 .story-card, .principle-card, .status-column, .lesson-card, .direction-column { border-radius: 18px; }
 .story-card h3, .principle-card h3 { font-size: 1.08rem; }
 .story-card p, .principle-card p, .status-column li, .direction-column li, .lesson-card p { font-size: .86rem; line-height: 1.55; }
@@ -137,6 +153,59 @@ p { text-wrap: pretty; }
 .decision-outcomes strong { font-size: .8rem; }
 .decision-outcomes span, .architecture-flow li, .feedback-card p, .system-in-action p { font-size: .72rem; }
 .system-actions i { font-size: .68rem; }
+
+/* Material and accent normalization. This layer intentionally changes color only. */
+::selection { background: rgba(198, 90, 46, .28); color: var(--brand-ink); }
+:focus-visible { outline-color: var(--brand-lime); }
+.brand span,
+.hero h1 em,
+.section-heading h2 em,
+.contact h2 em,
+.section-kicker,
+.project-tag,
+.service-no,
+.story-no,
+.workflow-panel-label,
+.labs-kicker,
+.labs-flow-step span,
+.home-labs .section-kicker,
+.home-labs h2 em,
+.lab-card-copy h2 em,
+.orion-hero h1 em { color: var(--brand-lime); }
+.eyebrow span,
+.lab-status i,
+.progress-bar,
+.timeline-dot,
+.roadmap-dot { background: var(--brand-lime); box-shadow: 0 0 0 5px rgba(198,90,46,.10); }
+.button-primary,
+.home-labs .button-primary,
+.labs-product-note { background: var(--brand-lime); border-color: var(--brand-lime); color: var(--brand-night); }
+.button-primary:hover,
+.home-labs .button-primary:hover { background: var(--brand-lime-soft); border-color: var(--brand-lime-soft); color: var(--brand-paper); }
+.site-nav a:hover,
+.site-nav a.active { color: var(--brand-lime-soft); }
+.site-nav .nav-cta,
+.site-nav .nav-cta:hover { background: var(--brand-night); color: var(--brand-paper); }
+.home-labs .section-kicker,
+.home-labs h2 em,
+.labs-flow-step span { color: #d77a55; }
+.lab-status i { background: #d77a55; }
+.labs-flow-step:hover { background: rgba(198,90,46,.10); }
+.labs-product-note { border-color: rgba(198,90,46,.55); box-shadow: 0 18px 38px rgba(11,11,11,.28); }
+.project-visual.visual-work,
+.visual-dashboard,
+.visual-process,
+.visual-ai { background-color: var(--brand-mist); }
+.project-visual svg [fill="#B6D741"],
+.project-visual svg [fill="#bfd94f"],
+.project-visual svg [fill="#dbea66"] { fill: var(--brand-lime); }
+.project-visual svg [stroke="#B6D741"],
+.project-visual svg [stroke="#bfd94f"],
+.project-visual svg [stroke="#dbea66"] { stroke: var(--brand-lime); }
+.workflow-panel,
+.architecture-panel,
+.system-in-action,
+.hero-system-map { border-color: rgba(198,90,46,.18); }
 
 @media (max-width: 900px) {
   body { font-size: 16px; }
