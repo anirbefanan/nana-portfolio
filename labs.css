@@ -301,6 +301,12 @@ body.labs-page {
 .continue-card h3 { margin: auto 0 10px; font-size: 1.35rem; letter-spacing: -.035em; }
 .continue-card p { margin: 0; color: var(--muted); font-size: .78rem; line-height: 1.45; }
 
+/* Public summaries reuse the compact cards on the dark library surface. */
+.labs-library .continue-grid { margin-top: 24px; }
+.labs-library .continue-card { background: var(--labs-cream); color: var(--ink); }
+.labs-library .continue-card > span { color: var(--accent-dark); }
+.labs-library .continue-card p { font-size: .9rem; line-height: 1.55; }
+
 .labs-footer .brand { display: inline-block; }
 
 @media (max-width: 1000px) {

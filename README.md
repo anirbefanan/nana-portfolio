@@ -28,9 +28,9 @@ Then open the local preview on port `8000`. Stop the server with `Ctrl+C`.
 
 ## Replace the resume
 
-1. Add the approved PDF to `assets/`, for example `Nana-Febrina-Resume.pdf`.
-2. In `index.html`, replace `assets/Nana-Febrina-Resume-PLACEHOLDER.txt` with the PDF filename.
-3. Remove the placeholder text file.
+1. Replace `assets/Nana_Febrina_Resume.pdf` with the latest approved public CV.
+2. Keep this stable filename so existing Download Resume links continue to work.
+3. Verify the PDF opens and the public URL returns HTTP 200 after deployment.
 
 ## Add or update projects
 
